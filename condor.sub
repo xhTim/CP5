@@ -1,0 +1,8 @@
+universe = vanilla
+executable = pp_highMultGen
+arguments = $(Process)
+output = log/condor_job_$(Process).out
+error = log/condor_job_$(Process).err
+log = log/condor_job_$(Process).log
++MaxRuntime = 72000
+queue 4000
