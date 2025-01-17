@@ -91,12 +91,13 @@ int main(int argc, char *argv[]) {
   //Set the RNG seed to be based on the system clock (seed = 0 means use clock)
   //Should be set to another value if you want reproducable MC events
   pythia.readString("Random:setSeed = on");
-  pythia.readString("Random:seed = " + std::to_string(uniqueSeed));
+  pythia.readString("Random:seed = 0"); // set to time
+  // pythia.readString("Random:seed = " + std::to_string(uniqueSeed));
  
   //initialize
   pythia.init();
 
-  
+
   //*********************************************** ROOT and Tree SETUP  **************************************************
   clock_t now = clock();
 
